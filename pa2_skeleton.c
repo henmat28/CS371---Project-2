@@ -131,12 +131,12 @@ void *client_thread_func(void *arg) {
     return NULL;
 }
 
-long long total_rtt = 0;
-long total_messages = 0;
-float total_request_rate = 0.0;
-long total_tx = 0, total_rx = 0;
-
 void run_client() {
+    long long total_rtt = 0;
+    long total_messages = 0;
+    float total_request_rate = 0.0;
+    long total_tx = 0, total_rx = 0;
+        
     pthread_t threads[num_client_threads];
     client_thread_data_t thread_data[num_client_threads];
     struct sockaddr_in server_addr;
